@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Object Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">        
+</head>
+<body>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Coupang_logo.svg/800px-Coupang_logo.svg.png">
+    <div class="container">
+    <div class="row">
+        <br>
+        <p>
+            Select Image to Process
+        </p>
+        <p>
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <p>
+                {% for message in messages %}
+                <p>{{ message }}</p>
+                {% endfor %}
+                </p>
+            {% endif %}
+            {% endwith %}
+        </p>
+        {% if filename %}
+            <div>
+                <img src="{{ url_for('display_image', filename=filename) }}">
+            </div>
+        {% endif %}
+        <form method="post" action="/uploads" enctype="multipart/form-data">
+            <dl>
+                <p>
+                    <input type="file" name="file" class="form-control" autocomplete="off" required>
+                </p>
+            </dl>
+            <p>
+                <input type="submit" value="Submit" class="btn btn-info">
+            </p>
+        </form>
+    </div>
+    </div>
+</body>
+</html>

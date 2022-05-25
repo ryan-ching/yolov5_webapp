@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Object Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
+</head>    
+<body>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Coupang_logo.svg/800px-Coupang_logo.svg.png">
+    <br>
+    <form action="/home" method="post" enctype="multipart/form-data">
+        {% for message in get_flashed_messages()%}
+            <p> {{message}} </p>
+        {% endfor %}
+        <br>
+        <input type="file" name="file" autocomplete="off" required>
+        <br>
+        <input type="submit" value="SUBMIT" id="submit">
+    </form>
+</body>
+</html>

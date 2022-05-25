@@ -1,0 +1,38 @@
+body {
+  background-color: royalblue;
+  text-align: center;
+}
+
+p {
+  color: white;
+  font-family: Shanti;
+  font-size: 1.3em;
+  margin: 20px;
+}
+
+img {
+  margin: 40px 0 30px 0;
+  width: 250px;
+}
+
+input {
+  width: 300px;
+  height: 50px;
+  margin: 20px;
+  border: none;
+  border-radius: 10px;
+  font-family: Shanti;
+  text-align: center;
+  font-size: 1em;
+}
+
+#SUBMIT {
+  background-color: gainsboro;
+  color: black;
+  width: 200px;
+}
+
+#SUBMIT:hover {
+  background-color: black;
+  cursor: pointer;
+}
